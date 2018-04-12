@@ -1,24 +1,34 @@
+import javax.swing.JOptionPane;
+
 //    Copyright (c) The League of Amazing Programmers 2013-2017
 //    Level 0
-
-
 
 public class TheRiddler {
 
 	public static void main(String[] args) {
 
-		// 1. Make a variable to hold the score
+		int score = 0;
+		String answer = JOptionPane.showInputDialog(null, "You can drop me from the tallest building"
+				+ " and I'll be fine, but if you drop me in water I die. What am I?");
+		if (answer.equalsIgnoreCase("paper")) {
+			JOptionPane.showMessageDialog(null, "correct!");
+			score++;
+		}
 
-		// 3. Ask the user a riddle. Here are some ideas: bit.ly/some-riddles
+		else {
+			JOptionPane.showMessageDialog(null, "Wrong!: The correct answer is paper.");
+		}
 
-		// 4. If they got the answer right, pop up "correct!" and increase the score by one
+		String answer1 = JOptionPane.showInputDialog(null, "Which word in the dictionary is spelled incorrectly?");
+		if (answer1.equalsIgnoreCase("incorrectly")) {
+			JOptionPane.showMessageDialog(null, "correct!");
+			score++;
+		}
 
-		// 5. Otherwise, say "wrong" and tell them the answer
+		else {
+			JOptionPane.showMessageDialog(null, "Wrong!: The correct answer is incorrectly.");
+		}
 
-		// 6. Add some more riddles
-
-		// 2. Make a pop up to show the score.
-		
+		JOptionPane.showMessageDialog(null, "Score: " + score);
 	}
 }
-
